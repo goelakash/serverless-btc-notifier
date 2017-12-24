@@ -49,10 +49,7 @@ aws cloudformation deploy --template-file cloudformation-packaged.yaml \
 
 If all went well, your stack has now been created.
 
-3. The previous step creates an SNS topic to publish the price updates. Update the SNS topic ARN in your Lambda function. Refer [this](http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html) to add the SNS_TOPIC environment variable to the lambda function created by cloudformation.
-
-
-4. We're almost done. The SMS subscription that you've setup may not send the SMS in a timely or a reliable manner. To change that, update your Text Messaging preferences in SNS to ```Transactional```. You can read more [here](http://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html).
+3. We're almost done. The SMS subscription that you've setup may not send the SMS in a timely or a reliable manner. To change that, update your Text Messaging preferences in SNS to ```Transactional```. You can read more [here](http://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html).
 
 
 That's it. You're daily bitcoin price ticker should be up and running smoothly.
